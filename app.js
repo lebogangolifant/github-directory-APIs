@@ -16,10 +16,10 @@ githubUserForm.addEventListener('submit', (e) => {
     requestUserRepos(githubUserForm);
 })
 
-// github API call request function
-function requestUserRepos(username){
+// create github API call request function
+function requestUserRepos(username) {
     // create XMLHTTpRequest object
-    const xmlHttpR = new XMLHTTpRequest();
+    const xmlHttpR = new XMLHttpRequest();
 
     // github endpoint passing in specified username
     const url = `https://api.github.com/users/${username}/repos`;
@@ -43,7 +43,7 @@ function requestUserRepos(username){
             let li = document.createElement('li');
             
             // add list item class to each li
-            li.classList.add('list-group-item')
+            li.classList.add('repos-list')
         
             // create the html markup for each li
             li.innerHTML = (`
@@ -62,4 +62,3 @@ function requestUserRepos(username){
     // send the request to the server
     xmlHttpR.send();
     }
-}

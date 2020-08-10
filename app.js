@@ -12,7 +12,7 @@ githubUserForm.addEventListener('submit', (e) => {
     // get the value of the github username input field
     let githubUsername = usernameInput.value;
 
-    // github API passing in the github username
+    // github API passing in the username
     requestUserRepos(githubUsername);
 })
 
